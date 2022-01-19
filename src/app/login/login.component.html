@@ -1,0 +1,92 @@
+<!--<div class="container"> 
+    <form>
+    
+        <input [(ngModel)]="payload.username" type="text" class="form-control mt-1" name="username" placeholder="username">
+        <input [(ngModel)]="payload.password" type="password" class="form-control mt-1" name="password" placeholder="password">
+        <button class="btn btn-primary mt-2" (click)="login()">Login</button>
+
+        <p>Non sei registrato?</p>
+        <button type="button" class="btn btn-primary" [routerLink]="['/registrazione']" routerLinkActive="router-link-active" >Registrati</button>
+    
+    </form>
+</div>
+
+
+-->
+    
+<!--
+<div class="prova">
+    <div class="stage">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+      </div>
+      
+</div>
+  
+-->
+      
+<body>
+    
+            
+            <div class="container h-100 mt-5 esempio">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="user_card">
+                        <div class="d-flex justify-content-center">
+                            <div class="brand_logo_container">
+                                <img src="https://scontent.fmxp6-1.fna.fbcdn.net/v/t1.18169-9/15380789_551081028415976_396767480933125550_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=qWgPwhX_QnYAX8WEQQf&_nc_ht=scontent.fmxp6-1.fna&oh=00_AT8TLLEXOvMXmJG4SaC-y0z_dJ37KWa3CK8Y8Y-Owdru1A&oe=61E3E6DF" class="brand_logo" alt="Logo">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center form_container">
+                            <form>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="bi bi-box-arrow-in-right"></i></span>
+                                    </div>
+                                    <input type="text" name="username"  [(ngModel)]="payload.username" class="form-control input_user" value="" placeholder="username">
+                                </div>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="bi bi-chat-dots"></i>
+</span>
+                                    </div>
+                                    <input type="password" [(ngModel)]="payload.password" name="password" class="form-control input_pass" value="" placeholder="password">
+                                </div>
+                                
+                                    <div class="d-flex justify-content-center mt-3 login_container">
+                             <button type="button" name="button" (click)="login()" class="btn login_btn">Login</button>
+                           </div>
+                            </form>
+                        </div>
+                
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-center links">
+                                Non hai un account?<a href="#" [routerLink]="['/registrazione']" routerLinkActive="router-link-active"  class="ml-2">Registrati</a>
+                            </div>
+                            <div class="d-flex justify-content-center links">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+     
+</body>

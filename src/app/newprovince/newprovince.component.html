@@ -1,0 +1,15 @@
+<h1 class="mt-5 text-center">New Province</h1>
+<form class="my-3 mt-5">
+    <div class="mb-3">
+        <input type="text" [(ngModel)]="provincia.nome" name="nome" placeholder="Nome" class="form-control">
+    </div>
+    <div class="mb-3">
+        <input type="text"   [(ngModel)]="provincia.sigla" name="sigla" name="Sigla" placeholder="sigla" class="form-control">
+    </div>
+    
+ 
+   
+    <div class="mb-3">
+        <button type="button" class="btn btn-dark form-control" (click)="addProvincia(provincia)">Add User</button>
+    </div>
+</form>

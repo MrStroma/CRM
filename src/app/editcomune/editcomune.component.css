@@ -1,0 +1,14 @@
+#edit-comune{
+    position: fixed;
+    top: 50vh;
+    min-height: 500px;
+}
+#edit-comune .container{
+    background-color: #fff;
+    box-shadow: 7px 5px 15px #000;
+    border-radius: 2%;
+    padding: 50px 15px;
+}
+#edit-comune .container .btn{
+    width: 100%;
+}

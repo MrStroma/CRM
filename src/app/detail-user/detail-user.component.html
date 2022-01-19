@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1>Dettagli Cliente:</h1>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title" > <span> Nome: </span> {{detailUser.nomeContatto}} </h5>
+          <h5 class="card-title"> <span>Cognome:</span> {{detailUser.cognomeContatto}}</h5>
+          <h5 class="card-title"><span>ID:</span> {{detailUser.id}}</h5>
+          <h5 class="card-title"><span>Telefono:</span> {{detailUser.telefono}}</h5>
+          <h5 class="card-title"><span>Ragione Sociale:</span> {{detailUser.ragioneSociale}}</h5>
+          <h5 class="card-title"><span>Email Contatto:</span> {{detailUser.emailContatto}}</h5>
+          <h5 class="card-title"><span>Data Inserimento:</span> {{detailUser.dataInserimento}} </h5>
+          <h5 class="card-title"><span>Data Ultimo Contatto</span> {{detailUser.dataUltimoContatto}} </h5>
+          
+          <h5 class="card-title"><span>Importo</span>  </h5>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+      </div>         
+</div>
+
+
+
+<p class="h1 text-center mt-3 comuni">Elenco Fatture relative all'utente</p>
+<table class="table  mt-5">
+  <thead>
+  <tr>
+    <th class="text-center" scope="col">Id</th>
+    <th class="text-center" scope="col">Importo</th>
+    <th class="text-center" scope="col">Anno</th>
+    <th class="text-center" scope="col">Numero</th>
+ 
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of detailFattura" >
+    <td class="text-center">{{item.id}}</td>
+    <td class="text-center">{{item.importo}}</td>
+    <td class="text-center">{{item.anno}}</td>
+    <td class="text-center">{{item.numero}}</td>
+   
+  </tr>
+  </tbody>
+</table>

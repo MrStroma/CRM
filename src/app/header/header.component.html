@@ -1,0 +1,74 @@
+ <!-- 
+
+<nav class="navbar navbar-dark bg-dark text-center">
+ ì
+  <div class="container-fluid text-center">
+    <a class="navbar-brand text-center" href="#">Progetto Finale Epicode</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Login</a>
+        <a class="nav-link" href="#" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >Dashboard</a>
+        <a class="nav-link" href="#" [routerLink]="['/registrazione']" routerLinkActive="router-link-active" >Registrazione</a>
+        <a class="nav-link" href="#" [routerLink]="['/users']" routerLinkActive="router-link-active" >Clienti</a>
+        <a class="nav-link" href="#" [routerLink]="['/fatture']" routerLinkActive="router-link-active" >Fatture</a>
+        <a class="nav-link" href="#" [routerLink]="['/comuni']" routerLinkActive="router-link-active" >Comuni</a>
+        <a class="nav-link" href="#" [routerLink]="['/province']" routerLinkActive="router-link-active" >Province</a>
+        <a class="nav-link" href="#" (click)="logout()">LogOut</a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+-->
+
+
+    
+  <div class="container bar">
+      <label class="floatLeft" for="navBtn"><span></span></label>
+      <div class="text-center titolo">
+        <span class="floatRight paddingRight2rem">
+          <!-- Progetto Finale: Esempio di un CRM Aziendale--> 
+            
+        </span>
+      </div>
+  </div>
+  <div class="container position">
+      <input type="checkbox" class="navBtn" id="navBtn" />
+      <nav>
+          <ul>
+              <li>
+                  <a href="#" [routerLink]="['/users']" routerLinkActive="router-link-active" ><i class="bi bi-person-square"></i>
+                    Pagina Clienti</a>
+              </li>
+              <li>
+                  <a href="#" [routerLink]="['/fatture']" routerLinkActive="router-link-active" ><i class="bi bi-cash"></i>
+                    Pagina Fatture</a>
+              </li>
+              <li>
+                  <a href="#" [routerLink]="['/province']" routerLinkActive="router-link-active" ><i class="bi bi-signpost"></i>
+                    Pagina Province</a>
+              </li>
+              <li>
+                  <a href="#" [routerLink]="['/comuni']" routerLinkActive="router-link-active" ><i class="bi bi-signpost-2"></i>
+                    Pagina Comuni</a>
+              </li>
+              <li>
+                <a href="#" [routerLink]="['/login']" routerLinkActive="router-link-active" ><i class="bi bi-door-open"></i>
+                  Login</a>
+              </li>
+              <li>
+                <a href="#" (click)="logout()" ><i class="bi bi-door-open"> </i>
+                  Logout</a>
+              </li>
+              <li>
+                <a href="#" [routerLink]="['/registrazione']" routerLinkActive="router-link-active" ><i class="bi bi-person-plus-fill"></i>
+                  Registrazione</a>
+              </li>
+          </ul>
+      </nav>
+  </div>
+  

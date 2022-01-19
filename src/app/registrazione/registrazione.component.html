@@ -1,0 +1,116 @@
+<h1>Registrazione</h1>
+<form class="my-3">
+    <div class="mb-3">
+        <input type="text" [(ngModel)]="user.ragioneSociale" name="ragioneSociale" placeholder="RagioneSociale..." class="form-control">
+    </div>
+    <div class="mb-3">
+      <input type="text" [(ngModel)]="user.partitaIva" name="partitaIva" placeholder="partitaIva..." class="form-control">
+    </div>
+    <div class="mb-3">
+        <input type="text" [(ngModel)]="user.nomeContatto" name="nomeContatto" placeholder="Nome..." class="form-control">
+    </div>
+    <div class="mb-3">
+        <input type="text"  [(ngModel)]="user.cognomeContatto"  name="cognomeContatto" placeholder="Cognome..." class="form-control">
+    </div>
+    <div class="mb-3">
+        <input type="text" [(ngModel)]="user.email"  name="email" placeholder="Email..." class="form-control">
+    </div>
+    <div class="mb-3">
+        <input type="text"  [(ngModel)]="user.telefono"  name="telefono" placeholder="Telefono..." class="form-control">
+    </div>
+    <div class="mb-3">
+        <input type="text"   [(ngModel)]="user.ragioneSociale"  name="ragioneSociale" placeholder="Ragione Sociale..." class="form-control">
+    </div>
+  <div class="mb-3">
+    <input type="text"   [(ngModel)]="user.tipoCliente"  name="tipoCliente" placeholder="Tipo cliente..." class="form-control">
+  </div>
+  <div class="mb-3">
+    <input type="text"  [(ngModel)]="user.pec"  name="pec"  placeholder="Pec..." class="form-control">
+  </div>
+  <div class="mb-3">
+    <input type="text"   [(ngModel)]="user.emailContatto"  name="emailContatto" placeholder="email contatto..." class="form-control">
+  </div>
+  
+   <div class="container">
+    <label for="exampleInputEmail1">Indirizzo sede legale:</label>
+    <div class="row">
+      <div class="col-sm">
+        <div class="mb-2">
+          <input type="text"   [(ngModel)]="user.indirizzoSedeLegale.localita"  name="localita" placeholder="localita" class="">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="mb-2">
+          <input type="text"   [(ngModel)]="user.indirizzoSedeLegale.via"  name="via" placeholder="via" class="">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="mb-2">
+          <input type="text"   [(ngModel)]="user.indirizzoSedeLegale.civico"  name="civico" placeholder="civico" class="">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="mb-2">
+          <input type="text"   [(ngModel)]="user.indirizzoSedeLegale.cap"  name="cap" placeholder="cap" class="">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="mb-2">
+         
+
+          <select class="form-select" aria-label="Default select example"[(ngModel)]="user.indirizzoSedeLegale.comune" name="comune" aria-label="Default select example" >
+            <option selected  >Comune</option>
+            <option  *ngFor="let item of comuni" [ngValue]="item" >{{item.nome | json}}</option>
+          </select>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <div class="container">
+    <label for="exampleInputEmail1">Indirizzo sede Operativa:</label>
+    <div class="row">
+      <div class="col-sm">
+        <div class="mb-2">
+          <input type="text"   [(ngModel)]="user.indirizzoSedeOperativa.localita"  name="localita" placeholder="localita" class="">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="mb-2">
+          <input type="text"   [(ngModel)]="user.indirizzoSedeOperativa.via"  name="via" placeholder="via" class="">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="mb-2">
+          <input type="text"   [(ngModel)]="user.indirizzoSedeOperativa.civico"  name="civico" placeholder="civico" class="">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="mb-2">
+          <input type="text"   [(ngModel)]="user.indirizzoSedeOperativa.cap"  name="cap" placeholder="cap" class="">
+        </div>
+      </div> 
+      <div class="col-sm">
+        <div class="mb-2">
+          <select class="form-select" aria-label="Default select example" [(ngModel)]="user.indirizzoSedeOperativa.comune" name="comune" aria-label="Default select example" >
+            <option selected  >Comune</option>
+            <option  *ngFor="let item of comuni" [ngValue]="item" >{{item.nome | json}}</option>
+          </select>
+                 
+               <!--DA VEDERE IL SELECT CHE NON FA CLICCARE-->     
+        </div>
+      </div>  
+    </div>
+  </div>
+
+
+    <div class="mb-3">
+        <button type="button" class="btn btn-dark form-control" (click)="addUser(user)" >Registrati</button>
+    </div>
+
+      
+    
+</form>
+
+
+

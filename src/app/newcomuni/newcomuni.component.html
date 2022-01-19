@@ -1,0 +1,21 @@
+<h1 class="mt-5 text-center">New Comuni</h1>
+<form class="my-3 mt-5">
+    <div class="mb-3">
+        <input type="text" [(ngModel)]="comune.nome" name="nome"  placeholder="nome comune... " class="form-control">
+    </div>
+   
+    <div class="mb-2">
+        <select class="form-select" [(ngModel)]="comune.provincia" name="provincia" aria-label="Default select example" >
+          <option selected  >Provincia</option>
+          <option  *ngFor="let item of province" [ngValue]="item" >{{item.nome}}</option>
+        </select>
+               
+               
+      </div>
+  
+  
+   
+    <div class="mb-3">
+        <button type="button" class="btn btn-dark form-control" (click)="addComune(comune)">Add Comune</button>
+    </div>
+</form>

@@ -1,0 +1,36 @@
+<h1 class="mt-5 text-center">New Fatture</h1>
+<form class="my-3 mt-5">
+    <div class="mb-3">
+        <input type="text" [(ngModel)]="fattura.data" name="data" placeholder="Data.." class="form-control">
+    </div>
+    <div class="mb-3">
+        <input type="text"  [(ngModel)]="fattura.numero"  name="numero" placeholder="numbero.." class="form-control">
+    </div>
+    <div class="mb-3">
+        <input type="text" [(ngModel)]="fattura.importo"  name="importo"  placeholder="importo..." class="form-control">
+    </div>
+    <div class="col-sm">
+        <div class="mb-2">
+          <select class="form-select" [(ngModel)]="fattura.stato" name="stato" aria-label="Default select example" >
+            <option selected  >Stato</option>
+            <option   *ngFor="let item of selectStato" [ngValue]="item" >{{item.nome}}</option>
+          </select>
+        </div>
+      </div> 
+    <div class="mb-3">
+        <input type="text" [(ngModel)]="fattura.anno" name="anno" placeholder="anno..." class="form-control">
+    </div>
+    
+    <div class="col-sm">
+        <div class="mb-2">
+          <select class="form-select" [(ngModel)]="fattura.cliente" name="cliente" aria-label="Default select example" >
+            <option selected  >Clienti</option>
+            <option   *ngFor="let item of clienti" [ngValue]="item" >{{item.nomeContatto}}</option>
+          </select>
+        </div>
+      </div> 
+   
+    <div class="mb-3">
+        <button type="button" class="btn btn-dark form-control" (click)="addFattura(fattura)">Add Fattura</button>
+    </div>
+</form>

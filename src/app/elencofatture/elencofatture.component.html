@@ -1,0 +1,116 @@
+<!--
+
+<div class="stroma">
+  <p class="h1 text-center mt-3 fatture">Elenco Fatture</p>
+  <table class="table  mt-5">
+    <thead>
+    <tr>
+      <th class="text-center" scope="col">Id</th>
+      <th class="text-center" scope="col">Data</th>
+      <th class="text-center" scope="col">Numero</th>
+      <th class="text-center" scope="col">Anno</th>
+      <th class="text-center" scope="col">Importo</th>
+      <th class="text-center" scope="col">Stato</th>
+      <th class="text-center" scope="col">Cliente</th>
+      <th class="text-center" scope="col">Azioni</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of fatture; index as i">
+      <th class="text-center" scope="row">{{item.numero}}</th>
+      <td class="text-center">{{item.data}}</td>
+      <td class="text-center">{{item.numero}}</td>
+      <td class="text-center">{{item.anno}}</td>
+      <td class="text-center">{{item.importo}}</td>
+      <td class="text-center">{{item.stato.nome}}</td>
+      <td class="text-center">{{item.cliente.email}}</td>
+  
+        <td class="text-center">
+          <button type="button" class="btn btn-sm btn-outline-danger mx-1" (click)="deleteFattura(item)">
+              <i class="bi bi-trash-fill"></i>Cancella</button>
+          <button type="button" class="btn btn-sm btn-outline-info mx-1" (click)="editFattura(item)" >
+              <i class="bi bi-person-lines-fill">Modifica</i></button>
+              <button type="button" class="btn btn-sm btn-outline-success mx-1" [routerLink]="['/newfatture']" routerLinkActive="router-link-active"  >
+                <i class="bi bi-plus-circle">Aggiungi</i></button>
+      </td>
+    
+      
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<ul class="list-group mt-5">
+  <li class="list-group-item mt-5" *ngFor="let num of maxpages">
+    <a href="fatture/page/{{num}}">{{num}}</a>
+  </li>
+</ul>
+
+
+
+<app-editfatture *ngIf="openEdit" [editingFattura]="selectedFattura" (onEditFattura)="closePopup()">     </app-editfatture>
+
+
+
+
+-->
+
+<p class="h1 text-center mt-3 fatture">Tabella Fatture</p>
+<table class="container">
+
+  <thead>
+    <tr>
+      
+      <th  scope="col">Numero</th>
+      <th  scope="col">Data</th>
+      <th  scope="col">Anno</th>
+      <th  scope="col">Importo</th>
+      <th scope="col">Stato</th>
+      <th  scope="col">Cliente</th>
+      <th  scope="col">Azioni</th>
+    </tr>
+  </thead>
+  <tbody>
+ 
+    <tr *ngFor="let item of fatture; index as i">
+      <td scope="row" data-label="Numero">{{item.numero}}</td>
+      <td data-label="Data">{{item.data}}</td>
+      <td data-label="Anno">{{item.anno}}</td>
+      <td data-label="Importo">{{item.importo}}</td>
+      <td data-label="Stato">{{item.stato.nome}}</td>
+      <td data-label="Email">{{item.cliente.email}}</td>
+      
+
+
+      <td data-label="Azioni">
+        
+         <button type="button" class="btn btn-sm btn-outline-danger mx-1" (click)="deleteFattura(item)">
+          <i class="bi bi-trash-fill"></i>Cancella</button>
+          <button type="button" class="btn btn-sm btn-outline-info mx-1" (click)="editFattura(item)" >
+          <i class="bi bi-person-lines-fill">Modifica</i></button>
+          <button type="button" class="btn btn-sm btn-outline-success mx-1" [routerLink]="['/newfatture']" routerLinkActive="router-link-active"  >
+          <i class="bi bi-plus-circle">Aggiungi</i></button>
+      
+      
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+
+<div class="container" >
+  <ul class="d-flex justify-content-center ">
+    <li class="p-2"><i class="bi bi-chevron-double-left"></i></li>
+    <li class="p-2" *ngFor="let num of maxpages">
+      <a href="fatture/page/{{num}}" class="text-info">{{num}}</a>
+    </li>
+    <li class="p-2"><i class="bi bi-chevron-double-right"></i></li> 
+  </ul>
+</div>
+
+
+<app-editfatture *ngIf="openEdit" [editingFattura]="selectedFattura" (onEditFattura)="closePopup()">     </app-editfatture>

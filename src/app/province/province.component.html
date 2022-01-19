@@ -1,0 +1,38 @@
+<p class="h1 text-center mt-3 provincia">Elenco Province</p>
+<table class="table  mt-5">
+  <thead>
+  <tr>
+    <th class="text-center" scope="col">Id</th>
+    <th class="text-center" scope="col">Nome</th>
+    <th class="text-center" scope="col">Sigla</th>
+  
+    <th class="text-center" scope="col">Azioni</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of province">
+    <th class="text-center"  data-label="ID">{{item.id}}</th>
+    <td class="text-center"  data-label="Nome">{{item.nome}}</td>
+    <td class="text-center"  data-label="Sigla">{{item.sigla}}</td>
+
+      <td class="text-center"  data-label="Azioni">
+        <button type="button" class="btn btn-sm btn-outline-danger mx-1" (click)="deleteProvincia(item)" >
+            <i class="bi bi-trash-fill"></i>Cancella</button>
+        <button type="button" class="btn btn-sm btn-outline-info mx-1" (click)="editProvincia(item)" >
+            <i class="bi bi-person-lines-fill">Modifica</i></button>
+            <button type="button" class="btn btn-sm btn-outline-success mx-1" [routerLink]="['/newprovince']" routerLinkActive="router-link-active"  >
+              <i class="bi bi-plus-circle">Aggiungi</i></button>
+    </td>
+  
+    
+  </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li >
+    <a ></a>
+  </li>
+</ul>
+
+<app-editprovince *ngIf="openEdit" [editingProvincia]="selectedProvincia" (onEditProvincia)="closePopup()"></app-editprovince>

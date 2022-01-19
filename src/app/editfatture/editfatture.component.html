@@ -1,0 +1,39 @@
+<div id="edit-fattura" class="popup">
+
+    <div class="container">
+
+        <form action="">
+            <div class="row">
+                <div class="col-6">
+                <input type="text"  [(ngModel)]="fattura.data" name="data"  class="form-control">
+            </div>
+            <div class="col-6">
+                <input type="text" [(ngModel)]="fattura.numero" name="numero" class="form-control" name="username" placeholder="username">
+            </div>
+            <div class="col-6">
+                <input type="email" [(ngModel)]="fattura.anno" name="anno" class="form-control" name="email" placeholder="email">
+            </div>
+            
+            <div class="col-6">
+                <input type="text" [(ngModel)]="fattura.importo" name="importo" class="form-control" name="password" placeholder="password">
+            </div>
+            
+            <div class="col-sm">
+                <div class="mb-2">
+                  <select class="form-select" [(ngModel)]="fattura.stato" name="stato" aria-label="Default select example" >
+                    <option selected  >Stato</option>
+                    <option   *ngFor="let item of selectStato" [ngValue]="item" >{{item.nome}}</option>
+                  </select>
+                </div>
+              </div> 
+            
+            <div class="mt-3 col-12">
+                <button class="btn btn-dark" (click)="editFattura(fattura)">
+                    Aggiungi
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+    
+</div>

@@ -1,0 +1,1686 @@
+{
+	"info": {
+		"_postman_id": "84fe2a52-55c0-4653-b036-9e3de4856774",
+		"name": "Epicode Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Province",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/province?page=0&size=20&sort=id,ASC",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"province"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								},
+								{
+									"key": "sort",
+									"value": "id,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/province/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"province",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/province/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"province",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {   \"id\": 3,\r\n        \"nome\": \"FROSINONE\",\r\n        \"sigla\": \"FR\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/province/3",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"province",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nuovo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nome\": \"FROSINONE\",\r\n        \"sigla\": \"FR\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/province",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"province"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comuni",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/comuni?page=0&size=20&sort=id,ASC",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"comuni"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								},
+								{
+									"key": "sort",
+									"value": "id,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/comuni/0",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"comuni",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/comuni/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"comuni",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"SIGNA\",\r\n    \"provincia\": {\r\n        \"id\": 999999\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/comuni/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"comuni",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nuovo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"SIGNA\",\r\n        \"provincia\": {\r\n            \"id\": 999999\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/comuni",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"comuni"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StatoFattura",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/statifattura?page=0&size=20&sort=id,ASC",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"statifattura"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								},
+								{
+									"key": "sort",
+									"value": "id,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/statifattura/0",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"statifattura",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/statifattura/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"statifattura",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"PAGATA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/statifattura/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"statifattura",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nuovo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"PAGATA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/statifattura",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"statifattura"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clienti",
+			"item": [
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"followRedirects": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti?page=0&size=20&sort=id,ASC",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								},
+								{
+									"key": "sort",
+									"value": "id,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tipicliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti/tipicliente",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti",
+								"tipicliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByFatturatoAnnualeBetween",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti/fatturatoannuale?from=10000&to=33333333",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti",
+								"fatturatoannuale"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "10000"
+								},
+								{
+									"key": "to",
+									"value": "33333333"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByDataInserimentoBetween",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti/datainserimento?from=01.01.2021&to=31.12.2021",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti",
+								"datainserimento"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "01.01.2021"
+								},
+								{
+									"key": "to",
+									"value": "31.12.2021"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByDataUltimoContattoBetween",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti/dataultimocontatto?from=01.01.2021&to=31.12.2021",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti",
+								"dataultimocontatto"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "01.01.2021"
+								},
+								{
+									"key": "to",
+									"value": "31.12.2021"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByRagioneSocialeContains",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti/ragionesociale?nome=tant",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti",
+								"ragionesociale"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "tant"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"ragioneSociale\": \"Bruno-Romano SPA - EDIT\",\r\n    \"partitaIva\": \"14812266616\",\r\n    \"tipoCliente\": \"SRL\",\r\n    \"email\": \"rosalino.caruso@gmail.com\",\r\n    \"pec\": \"antonio.damico@gmail.com\",\r\n    \"telefono\": \"+38 855 62 44 5685\",\r\n    \"nomeContatto\": \"Sarita\",\r\n    \"cognomeContatto\": \"Serr\",\r\n    \"telefonoContatto\": \"380.260.3225\",\r\n    \"emailContatto\": \"armando.martinelli@hotmail.com\",\r\n    \"indirizzoSedeOperativa\": {\r\n        \"id\": 2,\r\n        \"via\": \"Contrada Gastone 4, Piano 4\",\r\n        \"civico\": \"698\",\r\n        \"cap\": \"38615\",\r\n        \"localita\": \"Vania del friuli\",\r\n        \"comune\": {\r\n            \"id\": 1,\r\n            \"nome\": \"LASTRA A SIGNA\",\r\n            \"provincia\": {\r\n                \"id\": 1,\r\n                \"nome\": \"FIRENZE\",\r\n                \"sigla\": \"FI\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\": {\r\n        \"id\": 1,\r\n        \"via\": \"Strada Ricci 55, Appartamento 58\",\r\n        \"civico\": \"925\",\r\n        \"cap\": \"65995\",\r\n        \"localita\": \"Ivonne umbro\",\r\n        \"comune\": {\r\n            \"id\": 1,\r\n            \"nome\": \"LASTRA A SIGNA\",\r\n            \"provincia\": {\r\n                \"id\": 1,\r\n                \"nome\": \"FIRENZE\",\r\n                \"sigla\": \"FI\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\": \"2019-06-01T08:11:01.911+00:00\",\r\n    \"dataUltimoContatto\": \"2021-03-24T21:32:06.375+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nuovo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ragioneSociale\": \"Bruno-Romano SPA - TEST\",\r\n    \"partitaIva\": \"14812266616\",\r\n    \"tipoCliente\": \"SRL\",\r\n    \"email\": \"rosalino.caruso@gmail.com\",\r\n    \"pec\": \"antonio.damico@gmail.com\",\r\n    \"telefono\": \"+38 855 62 44 5685\",\r\n    \"nomeContatto\": \"Sarita\",\r\n    \"cognomeContatto\": \"Serr\",\r\n    \"telefonoContatto\": \"380.260.3225\",\r\n    \"emailContatto\": \"armando.martinelli@hotmail.com\",\r\n    \"indirizzoSedeOperativa\": {\r\n        \"via\": \"Contrada Gastone 4, Piano 4\",\r\n        \"civico\": \"698\",\r\n        \"cap\": \"38615\",\r\n        \"localita\": \"Vania del friuli\",\r\n        \"comune\": {\r\n            \"id\": 1,\r\n            \"nome\": \"LASTRA A SIGNA\",\r\n            \"provincia\": {\r\n                \"id\": 1,\r\n                \"nome\": \"FIRENZE\",\r\n                \"sigla\": \"FI\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\": {\r\n        \"via\": \"Strada Ricci 55, Appartamento 58\",\r\n        \"civico\": \"925\",\r\n        \"cap\": \"65995\",\r\n        \"localita\": \"Ivonne umbro\",\r\n        \"comune\": {\r\n            \"id\": 1,\r\n            \"nome\": \"LASTRA A SIGNA\",\r\n            \"provincia\": {\r\n                \"id\": 1,\r\n                \"nome\": \"FIRENZE\",\r\n                \"sigla\": \"FI\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\": \"2019-06-01T08:11:01.911+00:00\",\r\n    \"dataUltimoContatto\": \"2021-03-24T21:32:06.375+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionList\": [\r\n        {\r\n            \"key\": \"email\",\r\n            \"value\": \"miamail@gmail.com\",\r\n            \"operation\": \"EQUAL\"\r\n        },\r\n        {\r\n            \"key\": \"pec\",\r\n            \"value\": \"miamail@gmail.com\",\r\n            \"operation\": \"NOT_EQUAL\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/clienti/find",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"clienti",
+								"find"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fatture",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture?page=0&size=20&sort=id,ASC",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								},
+								{
+									"key": "sort",
+									"value": "id,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture/2",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByCliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture/cliente/3?page=0&size=20&sort=id,ASC",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture",
+								"cliente",
+								"3"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								},
+								{
+									"key": "sort",
+									"value": "id,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByStato",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture/stato/1?page=0&size=20&sort=id,ASC",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture",
+								"stato",
+								"1"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								},
+								{
+									"key": "sort",
+									"value": "id,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByAnno",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture/anno/?anno=2020&page=0&size=20&sort=id,ASC",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture",
+								"anno",
+								""
+							],
+							"query": [
+								{
+									"key": "anno",
+									"value": "2020"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								},
+								{
+									"key": "sort",
+									"value": "id,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByDataBetween",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture/data/?from=01.01.2020&to=31.12.2021&page=0&size=20&sort=id,ASC",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture",
+								"data",
+								""
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "01.01.2020"
+								},
+								{
+									"key": "to",
+									"value": "31.12.2021"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								},
+								{
+									"key": "sort",
+									"value": "id,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByImportoBetween",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture/importo/?from=1000&to=35000&page=0&size=20&sort=id,ASC",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture",
+								"importo",
+								""
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1000"
+								},
+								{
+									"key": "to",
+									"value": "35000"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "20"
+								},
+								{
+									"key": "sort",
+									"value": "id,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture/cliente/3",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture",
+								"cliente",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":1,\"data\":\"2019-07-31T16:09:43.763+00:00\",\"numero\":0,\"anno\":2019,\"importo\":1692.16,\"stato\":{\r\n        \"id\": 1,\r\n        \"nome\": \"PAGATA\"\r\n    }\r\n    ,\"cliente\":{\"id\":1}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture/1",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nuovo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":\"2019-07-31T16:09:43.763+00:00\",\"numero\":0,\"anno\":2019,\"importo\":1692.16,\"stato\":{\r\n        \"id\": 1,\r\n        \"nome\": \"PAGATA\"\r\n    }\r\n    ,\"cliente\":{\"id\":1}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-TENANT-ID",
+								"value": "{{tenant}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionList\": [\r\n        {\r\n            \"key\": \"numero\",\r\n            \"value\": \"0001\",\r\n            \"operation\": \"EQUAL\"\r\n        },\r\n        {\r\n            \"key\": \"anno\",\r\n            \"value\": \"2021\",\r\n            \"operation\": \"EQUAL\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverAddress}}/api/fatture/find",
+							"host": [
+								"{{serverAddress}}"
+							],
+							"path": [
+								"api",
+								"fatture",
+								"find"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-TENANT-ID",
+						"value": "{{tenant}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user779\",\r\n    \"email\": \"user779@epicode.it\",\r\n    \"password\": \"111111\",\r\n    \"role\": [\"user\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{serverAddress}}/api/auth/signup",
+					"host": [
+						"{{serverAddress}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var res = pm.response.json();\r",
+							"pm.environment.set('token', res.accessToken);\r",
+							"pm.globals.set(\"token\", res.accessToken);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-TENANT-ID",
+						"value": "{{tenant}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"111111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{serverAddress}}/api/auth/login",
+					"host": [
+						"{{serverAddress}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test User access",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-TENANT-ID",
+						"value": "{{tenant}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{serverAddress}}/api/test/user",
+					"host": [
+						"{{serverAddress}}"
+					],
+					"path": [
+						"api",
+						"test",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Admin access",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-TENANT-ID",
+						"value": "{{tenant}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{serverAddress}}/api/test/admin",
+					"host": [
+						"{{serverAddress}}"
+					],
+					"path": [
+						"api",
+						"test",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/getAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-TENANT-ID",
+						"value": "{{tenant}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{serverAddress}}/api/users",
+					"host": [
+						"{{serverAddress}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "serverAddress",
+			"value": "https://epicode.online/epicodebeservice_v2_unauth",
+			"disabled": true
+		},
+		{
+			"key": "serverAddress",
+			"value": "https://epicode.online/epicodebeservice"
+		},
+		{
+			"key": "tenant",
+			"value": "fe0521"
+		}
+	]
+}

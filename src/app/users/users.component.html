@@ -1,0 +1,110 @@
+
+
+<!--
+
+  <div data-role="table" class="ui-responsive" >
+    <p class="h1 text-center mt-3 clienti">Tabella Clienti</p>
+    <table class="table tabella  mt-5 mb-5">
+      <thead>
+      <tr>
+        <th class="text-center" scope="col">Id</th>
+        <th class="text-center" scope="col">Nome</th>
+        <th class="text-center" scope="col">Cognome</th>
+        <th class="text-center" scope="col">Email</th>
+        <th class="text-center" scope="col">Ragione Sociale</th>
+     
+        <th class="text-center" scope="col">Azioni</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of users; index as i">
+        <th class="text-center" scope="row">{{i+1}}</th>
+        <td class="text-center">{{item.nomeContatto}}</td>
+        <td class="text-center">{{item.cognomeContatto}}</td>
+        <td class="text-center">{{item.email}}</td>
+        <td class="text-center">{{item.ragioneSociale}}</td>
+      
+    
+          <td class="text-center">
+            <button type="button" class="btn btn-sm btn-outline-danger mx-1" (click)="removeUser(item)">
+                <i class="bi bi-trash-fill"></i>Rimuovi</button>
+            <button type="button" class="btn btn-sm btn-outline-dark mx-1" (click)="editUser(item)">
+                <i class="bi bi-person-lines-fill">Modifica</i></button>
+        </td>
+      
+        
+      </tr>
+      </tbody>
+    </table>
+  
+  </div> 
+  
+  <ul class="list-group mt-5">
+    <li class="list-group-item mt-5" *ngFor="let num of pageNumbers">
+      <a href="users/page/{{num}}">{{num}}</a>
+    </li>
+  </ul>
+  
+
+
+
+  <app-edituser *ngIf="openEdit" [editingUser]="selectedUser" (onEditUser)="closePopup()"></app-edituser>
+
+
+
+  
+
+-->
+<p class="h1 text-center mt-3 clienti">Tabella Clienti</p>
+<table class="container">
+  
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Email</th>
+      <th scope="col">telefono</th>
+      <th scope="col">Ragione Sociale</th>
+      <th scope="col">Azioni</th>
+    </tr>
+  </thead>
+  <tbody>
+ 
+    <tr *ngFor="let item of users; index as i">
+      <td scope="row" data-label="Nome Contatto">{{item.nomeContatto}}</td>
+      <td data-label="Cognome">{{item.cognomeContatto}}</td>
+      <td data-label="Email">{{item.email}}</td>
+      <td data-label="telefono">{{item.telefono}}</td>
+      <td data-label="Ragione Sociale">{{item.ragioneSociale}}</td>
+      <td data-label="Azioni">
+        
+          <button type="button" class="btn btn-sm btn-outline-danger mx-1" (click)="removeUser(item)">
+              <i class="bi bi-trash-fill"></i>Rimuovi</button>
+          <button type="button" class="btn btn-sm btn-outline-info mx-1" (click)="editUser(item)">
+              <i class="bi bi-person-lines-fill">Modifica</i></button>
+              <button type="button" class="btn btn-warning btn-sm" (click)="detailPeople(item)">
+                <i class="bi bi-person-lines-fill">Info</i>
+              </button>
+
+           
+      
+      
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+  <div class="container" >
+    <ul class="d-flex justify-content-center ">
+      <li class="p-2"><i class="bi bi-chevron-double-left"></i></li>
+      <li class="p-2" *ngFor="let num of pageNumbers">
+        <a href="users/page/{{num}}" class="text-info">{{num}}</a>
+      </li>
+      <li class="p-2"><i class="bi bi-chevron-double-right"></i></li> 
+    </ul>
+  </div>
+
+
+<app-edituser *ngIf="openEdit" [editingUser]="selectedUser" (onEditUser)="closePopup()"></app-edituser>
